@@ -20,7 +20,6 @@ if [ -z $SOURCE ]; then
     T=$TARGET/$FILE
     adb pull /system/$FILE $T
   done
-
   exit 0
 fi
 
@@ -30,7 +29,6 @@ for FILE in $ROOT $SYTEM ; do
   T=$TARGET/$FILE
   mkdir -p $(dirname $T) || exit 1
   rsync -av --delete $S $T || exit 1
-
-  exit 0
 done
+exit 0
 
