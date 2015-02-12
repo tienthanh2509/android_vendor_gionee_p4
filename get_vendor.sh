@@ -12,7 +12,7 @@ SYSTEM="/bin/6620_wmt_lpbk /bin/6620_launcher /bin/6620_wmt_concurrency /bin/wmt
 /bin/nvram_daemon /bin/nvram_agent_binder /lib/libnvram.so /lib/libcustom_nvram.so /lib/libnvram_sec.so \
 /lib/libhwm.so /lib/libnvram_platform.so /lib/libfile_op.so /lib/libnvram_daemon_callback.so /lib/libmtk_drvb.so \
 /bin/gsm0710muxd /bin/ccci_mdinit /bin/drvbd /bin/aee_aed /bin/aee /bin/mdlogger \
-/bin/dualmdlogger /bin/emcsmdlogger"
+/bin/dualmdlogger /bin/emcsmdlogger /lib/libmdloggerrecycle.so"
 
 # get data from a device
 if [ -z $SOURCE ]; then
