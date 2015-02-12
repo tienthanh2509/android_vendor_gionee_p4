@@ -8,7 +8,10 @@ ROOT="/etc/firmware/ /etc/wifi/"
 SYSTEM="/bin/6620_wmt_lpbk /bin/6620_launcher /bin/6620_wmt_concurrency /bin/wmt_loader \
 /lib/egl/libGLESv1_CM_mali.so /lib/egl/libGLESv2_mali.so /lib/egl/libEGL_mali.so \
 /lib/libm4u.so /lib/hw/hwcomposer.mt6592.so /lib/hw/gralloc.mt6592.so \
-/lib/libdpframework.so /lib/libion.so /lib/libMali.so /lib/mtk-ril.so /lib/librilmtk.so /lib/libaed.so"
+/lib/libdpframework.so /lib/libion.so /lib/libMali.so /lib/mtk-ril.so /lib/librilmtk.so /lib/libaed.so \
+/bin/nvram_daemon /bin/nvram_agent_binder /lib/libnvram.so /lib/libcustom_nvram.so /lib/libnvram_sec.so \
+/lib/libhwm.so /lib/libnvram_platform.so /lib/libfile_op.so /lib/libnvram_daemon_callback.so /lib/libmtk_drvb.so \
+/bin/gsm0710muxd /bin/ccci_mdinit /bin/drvbd /bin/aee_aed /bin/aee"
 
 # get data from a device
 if [ -z $SOURCE ]; then
@@ -24,7 +27,7 @@ if [ -z $SOURCE ]; then
 fi
 
 # get data from folder
-for FILE in $ROOT $SYTEM ; do
+for FILE in $ROOT $SYSTEM ; do
   S=$SOURCE/$FILE
   T=$TARGET/$FILE
   mkdir -p $(dirname $T) || exit 1
