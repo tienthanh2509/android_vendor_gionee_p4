@@ -24,7 +24,7 @@ GL="/lib/egl/libGLESv1_CM_mali.so /lib/egl/libGLESv2_mali.so /lib/egl/libEGL_mal
 
 #
 # ccci_mdinit starts, depends on additional services:
-# - aedd - unix socket connection
+# - drvbd - unix socket connection
 # - nvram - folders /data/nvram, modem settings like IMEI
 # - gsm0710muxd - /dev/radio/ ports for accessing the modem 
 # - mdlogger
@@ -39,7 +39,7 @@ RIL="/lib/mtk-ril.so /lib/librilmtk.so /lib/libaed.so \
 /bin/gsm0710muxd /bin/ccci_mdinit /bin/drvbd /bin/aee_aed /bin/aee /bin/mdlogger \
 /bin/dualmdlogger /bin/emcsmdlogger /lib/libmdloggerrecycle.so /bin/ccci_fsd"
 
-SYSTEM="$FIRMARE $WIFI $GL $RIL"
+SYSTEM="$FIRMWARE $WIFI $GL $RIL"
 
 # get data from a device
 if [ -z $SOURCE ]; then
