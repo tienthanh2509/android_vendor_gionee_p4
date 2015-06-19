@@ -1,1 +1,1 @@
-# android_vendor_mediatek_s5501
+# android_vendor_gionee_p4
